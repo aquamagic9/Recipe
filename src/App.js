@@ -15,8 +15,12 @@ function App() {
       </header>
       <CustomizedInputBase className="search"></CustomizedInputBase>
       <div className="row">
-      <Card></Card>
-      <Card></Card>
+      <Card className="card"></Card>
+      <Card className="card"></Card>
+      <Card className="card"></Card>
+      <Card className="card"></Card>
+      <Card className="card"></Card>
+      <Card className="card"></Card>
       </div>
     </div>
     
