@@ -12,16 +12,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <ButtonAppBar></ButtonAppBar>
-        <CustomizedInputBase></CustomizedInputBase>
-        <Table>
-          <TableRow>
-            <TableCell><Card></Card></TableCell>
-            <TableCell><Card></Card></TableCell>
-            <TableCell><Card></Card></TableCell>
-          </TableRow>
-        </Table>
       </header>
+      <CustomizedInputBase className="search"></CustomizedInputBase>
+      <div className="row">
+      <Card></Card>
+      <Card></Card>
+      </div>
     </div>
+    
   );
 }
 
