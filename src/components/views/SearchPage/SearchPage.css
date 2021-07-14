@@ -1,0 +1,23 @@
+.page{
+    text-align: center;
+    height: 100vh;
+    background-color: #282c34;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.page-header{
+    display: flex;
+    width: stretch;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.col{
+    width: stretch;
+}
+.card {
+    padding: 20px;
+}
