@@ -13,7 +13,6 @@ import { findByLabelText } from '@testing-library/react';
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    minWidth: 345,
     padding: '20px',
   },
   media: {
