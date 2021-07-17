@@ -3,7 +3,9 @@ import ButtonAppBar from '../../ButtonAppbar';
 import Card from '../../Card2'
 import CustomizedInputBase from '../../Search'
 import Grid from '@material-ui/core/Grid';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
 
 const data = {
@@ -45,19 +47,31 @@ const data = {
   "commentCount": 1681,
   "__v": 0
 }
-
 function LandingPage() {
 
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "4em 1em"
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <ButtonAppBar></ButtonAppBar>
+        <ButtonAppBar>Recipe</ButtonAppBar>
       </header>
       <CustomizedInputBase></CustomizedInputBase>
       <div className="row">
-      <Card className="card" title={data.title} channelTitle={data.channelTitle} thumbnails={data.thumbnails} description={data.description} ingredientsArr={data.ingredientsArr}></Card>
-      <Card className="card"></Card>
+      <Slider {...settings}>
+        <Card className="card" title={data.title} channelTitle={data.channelTitle} thumbnails={data.thumbnails} description={data.description} ingredientsArr={data.ingredientsArr}></Card>
+        <Card className="card"></Card>
+        <Card className="card"></Card>
+        <Card className="card"></Card>
+        <Card className="card"></Card>
+      </Slider>
       </div>
     </div>
   );

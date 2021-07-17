@@ -1,0 +1,12 @@
+.content{
+    flex:1;
+}
+.thumnail{
+    flex:1;
+}
+.info{
+    flex:1;
+}
+.detail{
+    flex:4;
+}

@@ -48,8 +48,9 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  
   const orders = props.description
-  const listItem = orders &&orders.map((order) =>
+  const listItem = orders && orders.map((order) =>
     (<Typography paragraph>{order}</Typography>)
   );
   const ingredients = props.ingredientsArr
