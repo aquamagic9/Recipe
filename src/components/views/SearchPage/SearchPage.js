@@ -2,7 +2,8 @@ import './SearchPage.css';
 import ButtonAppBar from '../../ButtonAppbar';
 import Card from '../../Cardcol2'
 
-const data = {
+const data = [
+    {
     "description": [
         "1. 대파는 반으로 갈라 송송 썰고 소시지는 얇게 썰어 준비한다.",
         "2. 김치는 가위를 이용하여 잘게 썰어 준비한다.",
@@ -40,18 +41,55 @@ const data = {
     "dislikeCount": 1113,
     "commentCount": 1681,
     "__v": 0
+},
+{
+    "description": [
+        "1. 참치기름을 냄비에 붓고 김치와 볶기 (설탕 반스푼 넣기)",
+        "2. 김치가 적당히 볶아지면 양파 넣고 볶기",
+        "3. 양파가 투명해지면 물 1컵 붓기",
+        "4. 중약불에서 끓이다가 5분 뒤 고춧가루 반스푼, 참치 넣기",
+        "5. 참치는 젓지말고 가만히 둔채로 5분 더 끓인다",
+        "6. 대파 넣고 한번 부르르 끓으면 불 끄기"
+    ],
+    "ingredientsArr": [
+        "설탕",
+        "김치",
+        "볶기",
+        "양파",
+        "김",
+        "파",
+        "고춧가루",
+        "대파"
+    ],
+    "_id": "60f0204a46296120843a9d0c",
+    "videoId": "_4Q8iMSCmhc",
+    "channelId": "UCPWFxcwPliEBMwJjmeFIDIg",
+    "thumbnails": "https://i.ytimg.com/vi/_4Q8iMSCmhc/hqdefault.jpg",
+    "title": "밥 두그릇이 우스운 참치 김치찌개",
+    "channelTitle": "하루한끼 one meal a day",
+    "subscriberCount": 4300000,
+    "viewCount": 1120911,
+    "likeCount": 22144,
+    "dislikeCount": 252,
+    "commentCount": 883,
+    "__v": 0
 }
+];
+
 
 function SearchPage() {
-
+    const items = data
+    const ItemList = items && items.map((item) =>
+    (<div className="card" ><Card title={item.title} channelTitle={item.channelTitle} thumbnails={item.thumbnails} description={item.description} ingredientsArr={item.ingredientsArr}></Card></div>
+    )
+    );
     return (
         <div className="page">
             <header className="page-header">
                 <ButtonAppBar>Search</ButtonAppBar>
             </header>
             <div className="col">
-                <div className="card"><Card  title={data.title} channelTitle={data.channelTitle} thumbnails={data.thumbnails} description={data.description} ingredientsArr={data.ingredientsArr}></Card></div>
-                <div className="card"><Card></Card></div>
+                {ItemList}
                 <div className="card"><Card></Card></div>
                 <div className="card"><Card></Card></div>
                 <div className="card"><Card></Card></div>

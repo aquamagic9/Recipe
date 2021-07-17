@@ -1,12 +1,16 @@
+.paper{
+    width: stretch;
+    height: stretch;
+    overflow-y: auto;
+    background-color: #282c34;;
+}
 .content{
-    flex:1;
-}
-.thumnail{
-    flex:1;
-}
-.info{
+    display: flex;
+    width: stretch;
     flex:1;
 }
 .detail{
-    flex:4;
+    background-color: chartreuse;
+    width: 400;
+    height: 233;
 }

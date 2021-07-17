@@ -8,11 +8,13 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        margin: '2em 2em'
     },
     details: {
-        flex: 1.2,
+        flex: 1.4,
         display: 'flex',
         flexDirection: 'column',
+        margin: '1em 1em'
     },
     content: {
         flex: '1 0 auto',
@@ -36,10 +38,6 @@ export default function MediaControlCard(props) {
     const theme = useTheme();
     const [expanded, setExpanded] = React.useState(false);
 
-    const orders = props.description
-    const listItem = orders && orders.map((order) =>
-        (<Typography paragraph>{order}</Typography>)
-    );
     const ingredients = props.ingredientsArr
     const ingredientsList = ingredients && ingredients.map((ingredient) =>
         (<span> {ingredient},</span>)
